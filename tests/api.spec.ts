@@ -12,7 +12,6 @@ console.log(body);
 });
 
 test('Post api', async({request})=>{
-
 const response = await request.post('https://jsonplaceholder.typicode.com/users',
     {
         data: {
@@ -20,7 +19,6 @@ const response = await request.post('https://jsonplaceholder.typicode.com/users'
             email:'Mayank@gmail.com'
         }
     }
-
 );
 expect(response.status()).toBe(201);
 const body = await response.json();
